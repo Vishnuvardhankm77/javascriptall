@@ -1,0 +1,12 @@
+<script>
+    var num=158;
+    var digit;
+    var greatest = 0;
+    for(num=158;num>0;num=parseInt(num/10)){
+        digit=num%10;
+        if(digit>greatest){
+            greatest=digit;
+        }
+    }
+    console.log(greatest);
+</script>

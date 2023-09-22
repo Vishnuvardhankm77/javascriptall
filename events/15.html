@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            h1{
+                color: red;
+            }
+            button{
+                height: 25px;
+                background-color: orangered;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h1>Add Students</h1>
+            <input type="text" name="" id="d1">
+            <button onclick="clk(event)">Add Student</button>
+        </div>
+        <ul>
+
+        </ul>
+        <script>
+            var y = document.getElementById("d1");
+            var x = document.querySelector("ul");
+            var students = [];
+            function clk(ev){
+                var i = y.value;
+                students.push(i);
+                addedList();
+            }
+             function addedList(){
+                x.innerHTML = '';
+                students.forEach(function(student){
+                    var z = document.createElement("li");
+                    z.innerHTML = student;
+                    z.style.color = "red";
+                    x.appendChild(z);    
+                });
+               }
+        </script>
+    </body>
+</html>

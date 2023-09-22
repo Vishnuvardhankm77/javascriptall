@@ -1,0 +1,13 @@
+<script>
+    var ar=[67,41,12,9,98,21];
+    for(var i=1;i<ar.length;i++){
+        var temp=ar[i];
+        var j=i-1;
+        while((j>-1)&&(temp<ar[j])){
+            ar[j+1]=ar[j];
+            j--;
+        }
+        ar[j+1]=temp;
+    }
+    console.log(ar);
+</script>

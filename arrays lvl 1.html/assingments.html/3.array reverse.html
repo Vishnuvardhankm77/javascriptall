@@ -1,0 +1,13 @@
+<script>//Print the reverse of all numbers present in an array
+    var a=[895,845,679,324]
+    for(i=0;i<=a.length-1;i++){
+        var rem;
+        var sum=0;
+        for(j=1;j<=a[i];j++){
+            rem=a[i]%10;
+            sum=sum*10+rem;
+            a[i]=parseInt(a[i]/10)
+        }
+        console.log(sum)
+    }
+</script>

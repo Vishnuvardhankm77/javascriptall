@@ -1,0 +1,23 @@
+<html>
+    <head>
+       <style>
+          div{
+                width: 250px;
+                height: 250px;
+                border: 1px solid;
+            }
+       </style>
+    </head>
+    <body>
+        <div onmouseover="mouseover(event)"></div>
+        <script>
+            var Colors=["red","green","blue","orange","skyblue","black"];
+            var index=0;
+            function mouseover(a){
+                var x=document.querySelector("div");
+                x.style.backgroundColor=Colors[index];
+                index=(index+1)%Colors.length;
+            }
+        </script>
+    </body>
+</html>

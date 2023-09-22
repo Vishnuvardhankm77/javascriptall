@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="unorderedlist"></ul>
+        <script>
+            var ulElement=document.getElementById("unorderedlist")
+            document.body.appendChild(ulElement);
+            var names=["apple","mango","orange"]
+            names.forEach(function(name){
+                var liElement=document.createElement("li")
+                liElement.innerHTML=name;
+                console.log(liElement)
+                ulElement.appendChild(liElement)
+            })
+        </script>
+    </body>
+</html>

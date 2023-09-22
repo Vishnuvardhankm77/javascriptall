@@ -1,0 +1,16 @@
+<script>//Print all the palindrome numbers in a given array
+    var a=[101,111,121]
+   for(i=0;i<=a.length-1;i++){
+    var temp=a[i];
+    var rem;
+    var sum=0;
+    for(j=1;j<=a[i];j++){
+        rem=a[i]%10;
+        sum = sum*10+rem;
+        a[i]=parseInt(a[i]/10)
+    }
+    if(temp===sum){
+        console.log(sum)
+    }
+   }
+</script>

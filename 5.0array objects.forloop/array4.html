@@ -1,0 +1,190 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var ar = [
+            {
+                "firstname": "praveen",
+                "lastname": "gubbala",
+                "age": 36,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 10000
+            },
+            {
+                "firstname": "srikanth",
+                "lastname": "gubbala",
+                "age": 32,
+                "gender": "male",
+                "city": "bengaluru",
+                "salary": 20000
+            },
+            {
+                "firstname": "pradeep",
+                "lastname": "reddy",
+                "age": 21,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 25000
+            },
+            {
+                "firstname": "mounika",
+                "lastname": "mudiraj",
+                "age": 20,
+                "gender": "female",
+                "city": "nalgonda",
+                "salary": 30000
+            },
+            {
+                "firstname": "nikhil",
+                "lastname": "m",
+                "age": 22,
+                "gender": "male",
+                "city": "guntur",
+                "salary": 2000
+            },
+            {
+                "firstname": "riya",
+                "lastname": "bhadouria",
+                "age": 14,
+                "gender": "female",
+                "city": "indore",
+                "salary": 40000
+            }
+        ];
+        //1.Print all the firstnames.
+        for(var x in ar){
+            console.log(ar[x].firstname)
+        }
+        //2.print all the lastname
+        for(var x in ar){
+            console.log(ar[x].lastname)
+        }
+        //3.Print all the full names.
+        for(var x in ar){
+            console.log(ar[x].firstname+ar[x].lastname)
+        }
+        //4.Print only those names whose age is more than 25.
+        for(var x in ar){
+            if(ar[x].age>25){
+                console.log(ar[x].firstname)
+            }
+        }
+        //5.Print all female names.
+        ar.forEach(function(s,i){
+            if(s.gender==="female")
+            {
+                console.log(s.firstname);
+            }
+        })
+        //6.Print only those names whose salary is more than 25000 and increase their salaries by 15%.
+        var a=ar.filter(function(s,i){
+                return (s.salary>25000)
+        });
+        var b=a.map(function(s,i){
+            return(s.salary*(15+100)/100)
+        })
+        console.log(b);
+        var res=a.reduce(function(a,b){
+            return (a.salary)
+        }
+        );
+        console.log(res);
+
+        //7.Using prompt, print only those names whose city is "hyd".
+        ar.forEach(function(s,i){
+            if(s.city==="hyd")
+                console.log(s);
+        })
+        //8.Print the total salary of all the people.
+        var a=ar.reduce(function(a,b){
+            return(a+b.salary)
+                
+        },0);
+        console.log(a);
+        //9.Print all the fullnames in the alphabetical order.
+        var res=ar.sort(function(a,b){
+            if(a.firstname+a.lastname>b.firstname+a.lastname){
+                return 1;
+            }
+            else{
+                return -1;
+            }
+        },0)
+        console.log(res);
+        //.11Print all the fullnames in the increasing order of their age.
+        var y=ar.sort(function(a,b){
+            if(a.age>b.age){
+                return 1;
+            }
+            return -1;
+        })
+        console.log(y);
+        //11.Print all the fullnames in the reverse alphabetical order.
+        var res = ar.sort(function (a, b) {
+            if (a.firstname + a.lastname > b.firstname + a.lastname) {
+                return -1;
+            }
+            else {
+                return 1;
+            }
+        }, 0)
+        console.log(res);
+       //12.Print all the fullnames in the decreasing order of their salaries.
+        var res=ar.sort(function(a,b){
+            if(a.salary>b.salary){
+                return -1;
+            }
+            else{
+                return 1;1
+            }
+        },0)
+        console.log(res);
+       //13.Print all the cities in which the people live. There should not be any duplicate cities.
+        var br=ar.map(function(s,i){
+            return (!br.includes(s.city))
+                br.push(s.city);
+        })
+        
+        console.log(br);
+        
+        var br=[];
+        for(var i=0;i<=ar.length-1;i++){
+            if(!br.includes(ar[i].city)){
+                br.push(ar[i].city)
+            }
+        }
+        console.log(br);
+        //14.Print all the male names whose age is greater than 25
+        var a=ar.filter(function(s,i){
+            return (s.gender==="male" && s.age>25)
+        
+        })
+        console.log(a);
+        //15.Print all names that starts with "p" and the firstname should be in UPPERCASE. e.g. PRAVEEN gubbala.
+        var x=ar.filter(function(s,i){
+            return(s.firstname.startsWith("p"))
+        })
+        x.forEach(function(s,i){
+            console.log(s.firstname.toUpperCase()+" "+ s.lastname)
+        })
+        
+            if(!br.includes(ar[i].firstname.toUpperCase())){
+                br.push(ar[i].firstname.toUpperCase())
+            }
+        
+        console.log(br);
+        var ar=[1,2,3,2];
+        var br=[];
+        for(var i=0;i<ar.length-1;i++){
+            if(!br.includes(ar[i])){
+                br.push(ar[i])
+            }
+        }
+        console.log(br);
+    </script>
+</body>
+
+</html>

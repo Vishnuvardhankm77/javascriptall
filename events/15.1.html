@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Add Students</h1>
+        <input id="f1" type="text">
+        <button id="d1" onclick="abc()"></button>
+        <ul id="k1">
+
+        </ul>
+        <script>
+           var b=document.getElementById("d1")
+           b.innerHTML="Add Students"
+           var ar=[];
+           var w=document.getElementById("k1")
+           function abc(){
+            var y=document.getElementById("f1")
+            ar.push(y.value)
+            ult();
+        }
+        function ult(){
+        w.innerHTML=""
+        ar.forEach(function(a){
+            var nli=document.createElement("li")
+            nli.innerHTML=a;
+            document.getElementById("k1").appendchild(nli)
+        })
+        }
+        </script>
+    </body>
+</html>

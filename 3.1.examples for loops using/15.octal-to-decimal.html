@@ -1,0 +1,12 @@
+<script>
+    var num=101;
+    var digit;
+    var i=0;
+    var sum=0;
+    for(num=101;num>0;i++){
+        digit=num%10;
+        sum=sum+digit*(2**i);
+        num=parseInt(num/10)
+    }
+    console.log(sum)
+</script>

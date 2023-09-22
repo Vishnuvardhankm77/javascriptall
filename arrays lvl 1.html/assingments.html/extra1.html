@@ -1,0 +1,17 @@
+<script>
+    var ar=[67,41,12,9,98,21]
+    for(var i=0;i<ar.length;i++){
+        var min=i;
+        for(var j=i+1;j<ar.length;j++){
+            if(ar[j]<ar[min]){
+                min=j;
+            }
+        }
+        if(min!=i){
+            var temp=ar[i];
+            ar[i]=ar[min];
+            ar[min]=temp;
+        }
+    }
+    console.log(ar)
+</script>

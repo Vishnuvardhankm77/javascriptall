@@ -1,0 +1,24 @@
+<script>
+    var num=153;
+    var digit;
+    var count=0;
+    var temp=num;
+    var arm =num;
+    var sum =0;
+    while(num>0){
+        digit =num %10;
+        count++;
+        num=parseInt(num/10);
+    }
+   while(temp>0){
+    digit=temp%10;
+    sum =sum +(digit**count)
+    temp=parseInt(temp/10)
+   }
+   if(arm===sum){
+    console.log("it is an arm strong number")
+   }
+   else{
+    console.log("it is not an arm strong number")
+   }
+</script>

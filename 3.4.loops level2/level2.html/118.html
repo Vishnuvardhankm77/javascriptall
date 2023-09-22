@@ -1,0 +1,35 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+            /*var a= 2;
+            while( a <= 10){
+            var notPrime = false;
+            var i=2;
+            while(i <= a){
+            if (a % i === 0 && i !==a){
+                notPrime = true;
+            }a++
+            }
+            if (notPrime === false) {
+                console.log(a);
+            }
+            }*/
+           for (var a= 2; a <= 10;a++) {
+
+            var notPrime = false;
+            for (var i = 2; i <= a; i++) {
+                if (a % i === 0 && i !==a) {
+                    notPrime = true;
+                }
+            }
+            if (notPrime === false) {
+                console.log(a);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<script>//Write a function which can to return the reverse of a given number.
+    function rev(a){
+    var a=354;
+    var rem;
+    var sum=0;
+    for(a=354; a>0;a=parseInt(a/10)){
+        rem=a%10;
+        sum = sum*10+rem;
+    }
+    return(sum)
+    }
+    var reverse = rev(354);
+    console.log(reverse);
+    </script>

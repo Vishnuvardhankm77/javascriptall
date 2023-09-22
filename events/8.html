@@ -1,0 +1,31 @@
+<!-- likes and Dislikes counter Button -->
+<html>
+    <head>
+        <style>
+           
+        </style>
+    </head>
+    <body>
+         
+        <div style="text-align: center;">
+            <h1 style="color: red;">Like and Dislike Button</h1>
+           <button onclick="a()"; style="background-color: lightgreen;">Like</button><span id="d1"></span>
+           <br><br>
+           <button onclick="b()"; style="background-color: red;">Dislike</button><span id="d2"></span>
+        </div>
+        <script>
+           var isButtonclicked=0
+           var isButtonclicked1=0
+           document.getElementById("d1").innerHTML=isButtonclicked
+           document.getElementById("d2").innerHTML=isButtonclicked1
+           function a(){
+                isButtonclicked++
+                document.getElementById("d1").innerHTML=isButtonclicked;
+              }
+              function b(){
+                isButtonclicked1++
+                document.getElementById("d2").innerHTML=isButtonclicked1;
+              }
+        </script>
+    </body>
+</html>

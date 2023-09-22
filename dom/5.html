@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <style>
+            #img{
+                margin-right: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2><center>DOM-ASSIGNMENT</center></h2>
+        <!-- <h4>1.Create one h1 element and put some text into it.</h4>
+        <h3>Output :-</h3> -->
+        <div id="d2"></div>
+        <ul id="d3"></ul>
+        <ul id="d4"></ul>
+        <table border="2px">
+                <th>Name</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>city</th>
+                <th>salary</th>
+                <tbody id="d5">
+
+                </tbody>
+        </table>
+        <script>
+             var newh1=document.createElement("h1")
+            newh1.innerHTML="Hello DOM World !"
+            document.body.appendChild(newh1)
+            document.getElementById("d2").appendChild(newh1)
+
+          
+            var newh1=document.createElement("h1")
+            newh1.innerHTML="Hello DOM World !"
+            document.body.appendChild(newh1)
+            newh1.style.color="red"
+            document.getElementById("d2").appendChild(newh1)
+
+
+           
+
+           var a=document.getElementById("d3")
+            var students=["Ramesh","Suresh","Praveen","Gopi","Sunil"]
+            var x=document.querySelector('ul')
+            
+            students.forEach(function(student){
+                var nli=document.createElement('li')
+            nli.innerHTML=student;
+            a.appendChild(nli)
+            });
+           
+            
+
+
+           
+            
+            var b=document.getElementById("d4")
+            var numbers=['11','12','13','14','15','16','17']
+            var y=document.querySelector('ul')
+            
+            numbers.forEach(function(a){
+                var nli=document.createElement('li')
+            nli.innerHTML=a;
+            b.appendChild(nli)
+            });
+
+
+           
+            var people = [
+                            {
+                            "Name": "praveen",
+                            "age": 36,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 10000
+                            },
+                            {
+                            "Name": "srikanth",
+                            "age": 32,
+                            "gender": "male",
+                            "city": "bengaluru",
+                            "salary": 20000
+                            },
+                            {
+                            "Name": "pradeep",
+                            "age": 21,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 25000
+                            },
+                            {
+                            "Name": "mounika",
+                            "age": 20,
+                            "gender": "female",
+                            "city": "nalgonda",
+                            "salary": 30000
+                            },
+                            {
+                            "Name": "nikhil",
+                            "age": 22,
+                            "gender": "male",
+                            "city": "guntur",
+                            "salary": 2000
+                            },
+                            {
+                            "Name": "riya",
+                            "age": 14,
+                            "gender": "female",
+                            "city": "indore",
+                            "salary": 40000
+                            }
+                            ];
+                            var x=document.getElementById("d5")
+                            people.forEach(function(a){
+                                var td1=document.createElement('td')
+                                td1.innerHTML=people.Name;
+                                td1.appendChild(x)
+                            })
+
+
+                            var urls=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSF_aMunE2tbe_b7qJQDmH7ZW3GCU4_tYBUg&usqp=CAU",
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh52uOrAhjLtDNmswjNjU1sRz-vn1uqovRNA&usqp=CAU",
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI9EDFITYpTYnFzKfVGWs5alOqy24X7f8Ibw&usqp=CAU"]
+                                urls.forEach(function(url){
+                                    var img=document.createElement("img");
+                                    img.src=url;
+                                    img.width=300;
+                                    img.height=200;
+                                    img.setAttribute("id","img");
+                                    document.body.appendChild(img);
+                                })
+        </script>
+    </body>
+</html>

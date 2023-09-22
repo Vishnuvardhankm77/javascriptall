@@ -1,0 +1,26 @@
+<script>//Write a function which can check a given number is armstrong number or not
+        function armstrong(a){
+            var a=154;
+           var arm=a;
+           var sum=0;
+           var temp=a;
+           var c;
+           var count=0;
+            for(var a=153; a>0;a=parseInt(a/10)){
+               c=a%10;
+                count++;
+            }
+            for(var temp=153;temp>0;temp=parseInt(temp/10)){
+               c=temp%10;
+           sum=sum+(c**count);
+            }
+            if(arm===sum){
+               return("it is a arm strong number")
+            }
+            else{
+               return("it is not a arm strong number")
+            }
+        }
+        var x=armstrong(153)
+        console.log(x)
+</script>

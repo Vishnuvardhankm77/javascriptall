@@ -1,0 +1,104 @@
+<html>
+    <head></head>
+    <body>
+        <table  border="1px solid">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                </tr>
+               </thead> 
+               <tbody id="d1"></tbody>
+        </table>
+        
+        <script>//Display only those people in a table who are having salaries more than 20000.
+               var people = [
+                            {
+                            "firstname": "praveen",
+                            "lastname": "gubbala",
+                            "age": 36,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 10000
+                            },
+                            {
+                            "firstname": "srikanth",
+                            "lastname": "gubbala",
+                            "age": 32,
+                            "gender": "male",
+                            "city": "bengaluru",
+                            "salary": 20000
+                            },
+                            {
+                            "firstname": "pradeep",
+                            "lastname": "reddy",
+                            "age": 21,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 25000
+                            },
+                            {
+                            "firstname": "mounika",
+                            "lastname": "mudiraj",
+                            "age": 20,
+                            "gender": "female",
+                            "city": "nalgonda",
+                            "salary": 30000
+                            },
+                            {
+                            "firstname": "nikhil",
+                            "lastname": "mamidala",
+                            "age": 22,
+                            "gender": "male",
+                            "city": "guntur",
+                            "salary": 2000
+                            },
+                            {
+                            "firstname": "riya",
+                            "lastname": "bhadouria",
+                            "age": 14,
+                            "gender": "female",
+                            "city": "indore",
+                            "salary": 40000
+                            },
+
+                    ];  
+                            var tbody=document.getElementById("d1")
+                            var filteredPeople=people.filter(function(person){
+                             return(person.salary>=20000)
+                            })
+                             createTable(filteredPeople)
+                             function createTable(a){
+                                tbody.innerHTML=""
+                                a.forEach(function(person){
+                            var trow=document.createElement('tr')
+                            var td1=document.createElement('td')
+                            td1.innerHTML=person.firstname;
+                            var td2=document.createElement('td')
+                            td2.innerHTML=person.lastname;
+                            var td3=document.createElement('td')
+                            td3.innerHTML=person.age;
+                            var td4=document.createElement('td')
+                            td4.innerHTML=person.gender;
+                            var td5=document.createElement('td')
+                            td5.innerHTML=person.city;
+                            var td6=document.createElement('td')
+                            td6.innerHTML=person.salary;
+
+                            trow.appendChild(td1);
+                            trow.appendChild(td2);
+                            trow.appendChild(td3);
+                            trow.appendChild(td4);
+                            trow.appendChild(td5);
+                            trow.appendChild(td6);
+
+                            tbody.appendChild(trow)       
+                        })
+                        }
+        </script>
+    </body>
+</html>

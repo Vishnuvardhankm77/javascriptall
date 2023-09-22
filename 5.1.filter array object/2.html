@@ -1,0 +1,135 @@
+<script>
+    var people = [
+                            {
+                            "firstname": "praveen",
+                            "lastname": "gubbala",
+                            "age": 36,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 10000
+                            },
+                            {
+                            "firstname": "srikanth",
+                            "lastname": "gubbala",
+                            "age": 32,
+                            "gender": "male",
+                            "city": "bengaluru",
+                            "salary": 20000
+                            },
+                            {
+                            "firstname": "pradeep",
+                            "lastname": "reddy",
+                            "age": 21,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 25000
+                            },
+                            {
+                            "firstname": "mounika",
+                            "lastname": "mudiraj",
+                            "age": 20,
+                            "gender": "female",
+                            "city": "nalgonda",
+                            "salary": 30000
+                            },
+                            {
+                            "firstname": "nikhil",
+                            "lastname": "m",
+                            "age": 22,
+                            "gender": "male",
+                            "city": "guntur",
+                            "salary": 2000
+                            },
+                            {
+                            "firstname": "riya",
+                            "lastname": "bhadouria",
+                            "age": 14,
+                            "gender": "female",
+                            "city": "indore",
+                            "salary": 40000
+                            }
+                            ];
+
+
+                        
+                    // Print all the firstnames.
+                    // Print all the full names.
+                    // Print only those names whose age is more than 25.
+                    // var x=people.filter(function(a){
+                    //     return(a.age>25)
+                    // })
+                    // console.log(x)
+                    // // Print all female names.
+                    // var x=people.filter(function(a){
+                    //     return(a.gender==="female")
+                    // })
+                    // console.log(x)
+                    // // Print only those names whose salary is more than 25000 and increase their salaries by 15%.
+                    // // Using prompt, print only those names whose city is "hyd".
+                    // var a=prompt()
+                    // var x=people.filter(function(a){
+                    //     return(a.city==="hyd")
+                    // })
+                    // console.log(x)
+                    // Print the total salary of all the people.
+                    var z=people.reduce(function(a,b){
+                        return(a+b.salary)
+                    },0)
+                    console.log(z)
+                    // Print all the female names.
+                    // Print all the firstnames whose salary is more than 25000.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    // Using prompt, print all names whose city is "hyd".
+                    // Print all the fullnames in the alphabetical order.
+                    //people.sort(function(a,b){
+                    //     if(a.firstname>b.firstname){
+                    //         return 1;
+                    //     }
+                    //     if(a.firstname<b.firstname){
+                    //         return -1;
+                    //     }
+                    //     return 0;
+                    // })
+                    // people.forEach(function(a){
+                    //     console.log(a.firstname+" "+a.lastname)
+                    // })
+                    // Print all the fullnames in the increasing order of their age.
+                    people.sort(function(a,b){
+                        if(a.age>b.age){
+                            return 1;
+                        }
+                        if(a.age<b.age){
+                            return -1;
+                        }
+                        return 0;
+                    })
+                    console.log(people)
+                    // Print all the fullnames in the reverse alphabetical order.
+                    // people.sort(function(a,b){
+                    //     if(b.firstname>a.firstname){
+                    //         return 1;
+                    //     }
+                    //     if(b.firstname<a.firstname){
+                    //         return -1;
+                    //     }
+                    //     return 0;
+                    // })
+                    // people.forEach(function(a){
+                    //     console.log(a.firstname+" "+a.lastname)
+                    // })
+                    // Print all the fullnames in the decreasing order of their salaries.
+                    // people.sort(function(a,b){
+                    //     if(b.salary>a.salary){
+                    //         return 1;
+                    //     }
+                    //     if(b.salary<a.salary){
+                    //         return -1;
+                    //     }
+                    //     return 0;
+                    // })
+                    // console.log(people)
+                    // Print all the cities in which the people live. There should not be any duplicate cities.
+                    // Print all the male names whose age is greater than 25.
+                    //Print all names that starts with "p" and the firstname should be in UPPERCASE. e.g. PRAVEEN gubbala.
+
+</script>

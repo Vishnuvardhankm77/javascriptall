@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+           
+        </style>
+    </head>
+        <body>
+           <div style="text-align: center;">
+            <h1 style="color: red;">Change button background Color on click</h1>
+            <button onclick="a(event)">white</button>
+           </div>
+        </body>
+    <script>
+        function a(ev){
+            if(ev.target.innerHTML==="white"){
+                ev.target.innerHTML="green";
+               ev.target.style.backgroundColor="green"
+            }
+            else{
+                ev.target.innerHTML="white";
+                ev.target.style.backgroundColor="white";
+            }
+        }
+    </script>
+</html>

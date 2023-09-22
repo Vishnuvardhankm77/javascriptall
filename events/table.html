@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style>
+           
+        </style>
+    </head>
+    <body>
+        Enter Firstname : <input type="text" name="" id="fname"><br>
+                <button id="btn" onclick="clk()">Add</button><br><br>
+                <input type="text" name="" id="search" onkeyup="keyup()">
+                <ul id="ul">
+
+                </ul>
+
+    <script>
+        var array = [];
+        var ul = document.getElementById("ul");
+        var fname = document.getElementById("fname");
+        var btn = document.getElementById("btn");
+        var btn3 = document.createElement("button");
+        var box = document.getElementById("search");
+        btn3.innerHTML = "Update";
+        btn3.style.display = "none";
+        document.body.appendChild(btn3);
+        var index;
+        function clk(){
+            array.push(fname.value);
+            details();
+        }
+        function details(){
+            ul.innerHTML = "";
+            array.forEach(function(data,i){
+                var li = document.createElement("li");
+                var btn1 = document.createElement("button");
+                var btn2 = document.createElement("button");
+
+                li.innerHTML = data;
+                btn1.innerHTML = "Delete";
+                btn2.innerHTML = "Edit";
+
+                li.appendChild(btn1);
+                li.appendChild(btn2);
+                ul.appendChild(li);
+
+                btn1.onclick = function(){
+                    array.splice(i,1);
+                    details();
+                }
+                btn2.onclick = function(){
+                    fname.value = data;
+                    index = i;
+                    btn.style.display = "none";
+                    btn3.style.display = "block";
+                }
+            });
+        }
+        btn3.onclick = function(){
+            array[index] = fname.value;
+            btn.style.display = "block";
+            btn3.style.display = "none";
+            fname.value = "";
+            details();
+        }
+        function keyup(){
+            ul.innerHTML = "";
+            box.value = '';
+            array.forEach(function(a){
+                if(a.startsWith(box.value) === true){
+                    var li1 = document.createElement("li");
+                    li1.innerHTML = a;
+                    ul.appendChild(li1);
+                }
+            })
+        }
+    </script>
+        
+    </body>
+</html>

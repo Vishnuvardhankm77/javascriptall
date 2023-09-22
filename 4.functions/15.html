@@ -1,0 +1,19 @@
+<script>//Write a function which can check a given number is palindrome or not
+        function palindrome(num){
+            var num=12321;
+            var temp=num;
+            var rem;
+            var sum=0;
+            for(num=12321; num>0;num=parseInt(num/10)){
+                rem=num%10;
+                sum=sum*10+rem;
+            }
+            if(temp===sum){
+                console.log("it is a palindrome")
+            }
+            else{
+                console.log("it is not a palindrome")
+            }
+        }
+        var a=palindrome(12321)
+</script>

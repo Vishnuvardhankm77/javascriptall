@@ -1,0 +1,22 @@
+<script>
+    var num=1634;
+    var digit;
+    var sum=0;
+    var count=0;
+    var temp=num;
+    var arm=num;
+    for(num=1634.;num>0;num=parseInt(num/10)){
+        digit=num%10;
+        count++;
+    }
+    for(temp=1634;temp>0;temp=parseInt(temp/10)){
+        digit=temp%10;
+        sum=sum+(digit**count);
+    }
+    if(arm===sum){
+        console.log("it is an arm strong")
+    }
+    else{
+        console.log("it is not a arm strong")
+    }
+</script>

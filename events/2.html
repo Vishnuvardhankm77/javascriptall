@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            div{
+                width: 250px;
+                height: 250px;
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <br>
+        <button onclick="aa()">Red</button>
+        <button onclick="bb()">Green</button>
+        <button onclick="cc()">Blue</button>
+        <button onclick="dd()">Reset</button>
+    </body>
+    <script>
+        function aa(){
+            var a=document.querySelector("div");
+            a.style.backgroundColor="Red"
+        }
+        function bb(){
+            var b=document.querySelector("div");
+            b.style.backgroundColor="Green"
+        }
+        function cc(){
+            var c=document.querySelector("div");
+            c.style.backgroundColor=("Blue")
+        }
+        function dd(){
+            var d=document.querySelector("div");
+            d.style.backgroundColor=("white")
+        }
+    </script>
+</html>

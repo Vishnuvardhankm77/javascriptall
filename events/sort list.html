@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+           
+        </style>
+    </head>
+    <body>
+        <input type="text" name="" id="fname">
+        <input type="text" onkeyup="v1()"><br><br>
+        <button id="btn" onclick="clk()">submit</button>
+        <button id="btn1" onclick="sort1()">A-Z</button>
+        <button id="btn2" onclick="sort2()">Z-A</button>
+            <ul id="ul">
+           
+            </ul>
+        <script>
+            var ar = [];
+            var fname = document.getElementById("fname");
+            var btn = document.getElementById("btn");
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            function clk(){
+                ar.push(fname.value);
+                details();
+            }
+            function details(){
+                var ul = document.getElementById("ul");
+                ul.innerHTML = "";
+                ar.forEach(function(data,i){
+                    var li = document.createElement("li");
+                    li.innerHTML = data;
+                    ul.appendChild(li);
+                });
+            }
+
+
+            function sort1(){
+                ar.sort(function(a,b){
+                    if(a>b){
+                        return 1;
+                    }
+                    if(a<b){
+                        return -1;
+                    }
+                    return 0;
+                });
+                details();
+            }
+            function sort2(){
+                ar.sort(function(a,b){
+                    if(a<b){
+                        return 1;
+                    }
+                    if(a>b){
+                        return -1;
+                    }
+                    return 0;
+                });
+                details();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<script>//For the Given array: [23,34,54,10,4,7] search if the given number is there in an array or not. Given number: 34, Expected output: true Given number: 26, Expected output: false
+        var ar= [23,34,54,10,4,7] 
+        var num=26;
+        var present=0;
+        ar.forEach(function(a,b){
+            if(ar[b]===num){
+            present++
+        }
+        })
+        if(present>0){
+        console.log(true)
+        }
+        else{
+        console.log(false)
+        }
+</script>
